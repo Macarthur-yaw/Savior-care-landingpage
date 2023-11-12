@@ -9,10 +9,10 @@ function Card({imagePath,title,content}){
     return (
         <div className='md:w-[350px] md:h-[354px] rounded-[20px] flex flex-col items-center p-4 gap-[24px] shadow-md cursor-pointer'>
 
-    <img src={imagePath} className='mx-auto'/>
+    <img src={imagePath} className='mx-auto w-[12%] md:w-auto'/>
 <span>
-    <h1 className='text-center font-bold text-black text-[24px] leading-[56px]'>{title}</h1>
-    <h3 className='text-[#7D7987] text-[16px] font-normal'>{content}</h3>
+    <h1 className='text-center md:font-bold font-semibold text-black md:text-[24px] leading-[56px]'>{title}</h1>
+    <h3 className='text-[#7D7987] md:text-[16px] font-normal text-sm'>{content}</h3>
     </span>  </div>
     )
 }
@@ -21,25 +21,25 @@ const Section1 = () => {
     return (  
         <div>
             
-            <div id="fisrtSection">
-<h1 className="text-[#462E6A] text-center text-[45px] font-bold leading-[56px]  border-b-2/4">Services we Offer</h1>
+            <div id="fisrtSection" className='p-10'>
+<h1 className="text-[#462E6A] text-center md:text-[45px] font-bold leading-[56px]  border-b-2/4">Services we Offer</h1>
             </div>
 
-            <h3 className="text-[#CCD2E9] text-center text-[19px] font-semibold leading-[27px] tracking-[0.38px]">
+            <h3 className="text-[#CCD2E9] text-center md:text-[19px] font-semibold leading-[27px] tracking-[0.38px]">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
 
             </h3>
 
             <div className='flex flex-col gap-4 items-center py-10'>
 
-                <div className='flex flex-row gap-4'>
+                <div className='flex md:flex-row flex-col gap-4'>
                 <Card imagePath={icon1} title="Search Donor" content="Choose your doctor from thousands of specialist, general, and trusted hospitals"/>
 <Card imagePath={icon5} title="Online pharmacy" content="Buy your medicines with our mobile application with a simple delivery system"/>
 
 <Card imagePath={icon2} title="Consultation" content="Free consultation with our trusted doctors and get the best recomendations"/>
 </div>
 
-<div className='flex flex-row gap-4'>
+<div className='flex md:flex-row flex-col gap-4'>
 <Card imagePath={icon3} title="Details info" content="Free consultation with our trusted doctors and get the best recomendations"/>
 
 
@@ -48,7 +48,7 @@ const Section1 = () => {
 <Card imagePath={icon5} title="Tracking" content="Track and save your medical history and health data"/>
 </div>
 
-<button className='md:w-[200px] md:h-[56px] md:rounded-[55px] border-[1.4px] border-[#458FF6] text-[#458FF6]'>Learn more</button>
+<button className='md:w-[200px] md:h-[56px] md:rounded-[55px] border-[1.4px] border-[#458FF6] text-[#458FF6] p-2 rounded-md'>Learn more</button>
             </div>
         </div>
     );
